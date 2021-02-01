@@ -1,7 +1,7 @@
 # Netflix App
 kelas premium Buildwith Angga yang berjudul Flutter Apps Development - Membuat Aplikasi Cari Kos.
 ## preview
-<img src="/assets/screeshot/" width="32%"/>
+<img src="/assets/screeshot/Splash.png" width="32%"/>
 ## features:
 * Home Screen
 * Navbar
