@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kos/theme.dart';
+import 'package:flutter_kos/config/config.dart';
+import 'package:flutter_kos/screens/home_screen.dart';
 
 class SplashPage extends StatelessWidget {
   @override
@@ -47,17 +48,27 @@ class SplashPage extends StatelessWidget {
                   Container(
                     width: 210,
                     height: 50,
-                    child: RaisedButton(
-                      onPressed: () {},
-                      color: purpleColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        onSurface: purpleColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17),
+                        ),
                       ),
                       child: Text(
                         'Explore Now',
                         style: whiteTextSyle.copyWith(fontSize: 18),
                       ),
                     ),
+                    //
                   )
                 ],
               ),
