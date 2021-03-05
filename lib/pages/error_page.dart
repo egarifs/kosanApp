@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kos/config/config.dart';
-import 'package:flutter_kos/pages/home_page.dart';
+import 'package:flutter_kos/screens/home_screen.dart';
 
 class ErrorPage extends StatelessWidget {
   @override
@@ -36,7 +36,7 @@ class ErrorPage extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => HomeScreen(),
                         ),
                         (route) => false);
                   },

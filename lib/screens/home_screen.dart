@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    var spaceProvider = Provider.of<SpaceProvider>(context);
 
     return Scaffold(
       body: CustomScrollView(
@@ -134,7 +133,9 @@ SliverToBoxAdapter _buildRecommendedSpace(
                       index++;
                       return Container(
                         margin: EdgeInsets.only(top: index == 1 ? 0 : 30),
-                        child: SpaceCard(item),
+                        child: SpaceCard(
+                          space: item,
+                        ),
                       );
                     }).toList(),
                   );

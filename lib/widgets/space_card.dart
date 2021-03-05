@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kos/config/config.dart';
 import 'package:flutter_kos/models/models.dart';
-import 'package:flutter_kos/pages/detail_page.dart';
 
 class SpaceCard extends StatelessWidget {
   final Space space;
 
-  SpaceCard(this.space);
+  SpaceCard({this.space});
+
+  // SpaceCard(this.space);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DetailPage(),
-            ));
+        Navigator.pushNamed(context, "/detailspace", arguments: space);
       },
       child: Row(
         children: [
